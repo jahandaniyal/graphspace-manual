@@ -7,6 +7,22 @@
 
 This project contains the complete user manual for GraphSpace. While the manual sources are maintained in GitHub, the document is actually assembled, formatted, and staged by the ReadTheDocs.org site. ReadTheDocs presents online and PDF versions, and we will use both.
 
+
+## Building GraphSpace User Manual Locally
+
+The following steps needs to be followed in order to build the Manual locally.
+
+1. Download the GraphSpace User Manual Source by running `git clone https://github.com/adbharadwaj/graphspace-manual.git`.
+2. Navigate to GraphSpace User Manual directory: `cd graphspace-manual`
+3. Create a virtual environment for the project: `virtualenv venv`
+4. Start using the virtual environment: `source venv/bin/activate`
+5. Install all dependencies: `pip install -r requirements.txt`
+6. Navigate to docs directory: `cd docs`
+7. To build HTML files run the command: make html
+8. Navigate to builds/html directory: `cd _build/html`
+9. Open `index.html` on a web browser like Google Chrome or Mozilla Firefox
+
+
 ## Editing the Manual
 
 To edit manual text, you must first check out this repository and use a text editor on your workstation. (You can use GitHub's native Markdown editor, too, for small edits.)
@@ -26,4 +42,3 @@ The "latest" manual is automatically rebuilt by ReadTheDocs when the GitHub repo
 The rebuild can be observed by logging into the ReadTheDocs account (see me for credentials) and choosing the "graphspace" project. To see the build log, click on the grey Builds button. You can watch the progress of the build by manually refreshing your browser window until the build status shows either Passed or Failed - a build can take anywhere from 3 minutes to 10 minutes, depending on how busy the build server is. When the build is complete, if the status shows Passed, you can view the build result by clicking on the green View Docs button.
 
 The document will also be available via http://manual.graphspace.org/en/latest.
-
