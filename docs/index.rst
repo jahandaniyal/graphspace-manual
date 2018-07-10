@@ -22,6 +22,7 @@ GraphSpace 2.0 User Manual
    Searching_Graphs
    Sharing_Graphs
    Editing_Layouts
+   Layout_Compatibility
    Organizing_Graphs_Using_Tags
    Programmers_Guide
    Release_Notes
