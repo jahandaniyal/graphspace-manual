@@ -39,11 +39,13 @@ Anytime a User tries to apply a Layout on a particular version of the Graph, Gra
 - [Layout is not compatible with the current version of the Graph, &](#layout-is-not-compatible)
 - [The compatibility status of the layout is not known](#layout-compatibility-is-unknown)
 
+
 ### Layout is compatible
 
 If the layout is compatible with the current version of the Graph then it simply applied to the Graph. The User will not receive any Error or Warning Notification in the Status Bar.
 
 ![Compatible Layout](_static/gifs/gs-screenshot-LocalUser1-compatible_layout.gif)
+
 
 ### Layout is not compatible
 
@@ -51,20 +53,61 @@ If the layout is not compatible with the current version of the Graph then the U
 
 ![Incompatible Layout](_static/gifs/gs-screenshot-LocalUser1-incompatible_layout.gif)
 
+
+##### How to apply an incompatible layout?
+
+- ***Step 1 :***  Select the layout you want to apply.
+- ***Step 2 :*** Click on `Click here to view more information` to open layout compatibility table.
+
+![Error Ticker Bar](_static/images/graph-page/gs-screenshot-graph-page-ticker_bar_red_error.png)
+
+- ***Step 3 :***  Add styles for all nodes & edges in the `Nodes/Edges without style information` Column.
+
+![Add styles](_static/images/graph-page/gs-screenshot-graph-page-add_styles_conflicting_elements.png)
+
+- ***Step 4 :*** On successfully adding styles for all nodes and edges in `Nodes\Edges without style information` column, the layout compatibility status bar will disappear or change to a `Warning` status. The Warning status will appear if there are additional nodes and edges in the Layout which are not present in the Graph. This doesn't prevent the layout from being applied to the current version of the Graph.
+
+![Add styles](_static/images/graph-page/gs-screenshot-graph-page-added_styles_conflicting_elements.png)
+
+
 ### Layout Compatibility is unknown
 
 If the compatibility of the Layout with the current version of the Graph could not be determined then the User is notified about this issue in the Layout Compatibility Status Bar. The status bar turns Yellow to warn the User about the unknown layout compatibility status. The User can run a compatibility check to determine whether the layout is compatible or not.
 
 ![Layout Compatibility unknown](_static/gifs/gs-screenshot-LocalUser1-layout_status_unknown.gif)
 
-The layout compatibility check will return either of these 2 results -
-1. Layout is compatible - The user is notified using a `Green` status bar suggesting that the Layout is compatible and can be applied. The status is then stored in the database to allow Users to skip the Layout Compatibility checking step next time they want to use this layout.
+***Depending on the layout compatibility test,the User will have one of the following options -***
+
+1. ***Layout is compatible*** - The user is notified using a `Green` status bar suggesting that the Layout is compatible and can be applied. The status is then stored in the database to allow Users to skip the Layout Compatibility checking step next time they want to use this layout.
 
 ![Success Ticker](_static/images/graph-page/gs-screenshot-graph-page-ticker_bar_green.png)
 
-2. Layout is not compatible - The conflicting or missing nodes & edges are displayed in a List format. The User can then edit these nodes & edges to fix the errors.
+2. ***Layout is not compatible*** - The conflicting or missing nodes & edges are displayed in a List format. The User can then edit these nodes & edges to fix the errors.
 
 ![Layout not compatible](_static/images/graph-page/gs-screenshot-graph-page-incompatible_layout.png)
+
+
+##### How to apply a Layout with unknown compatibility status?
+
+- ***Step 1 :***  Select the layout you want to apply.
+- ***Step 2 :*** Click on `Click here to check Layout compatibility` test compatibility of the layout with the current version of the Graph.
+
+![Warning Ticker Bar](_static/images/graph-page/gs-screenshot-graph-page-ticker_bar_yellow_unknown_layout.png)
+
+If the layout is compatible then the User is notified with a `Green` Status bar. User can apply the layout by clicking on `Click here to apply this Layout`
+
+![Success Ticker Bar](_static/images/graph-page/gs-screenshot-graph-page-ticker_bar_green_success_layout.png)
+
+If there are errors in the Layout then a Table will popup in the screen showing a list of elements to the User.
+
+![Add styles](_static/images/graph-page/gs-screenshot-graph-page-add_styles_conflicting_elements.png)
+
+- ***Step 3 :***  Add styles for all nodes & edges in the `Nodes/Edges without style information` Column.
+
+- ***Step 4 :*** On successfully adding styles for all nodes and edges in `Nodes\Edges without style information` column, the layout compatibility status bar will disappear or change to a `Warning` status. The Warning status will appear if there are additional nodes and edges in the Layout which are not present in the Graph. This doesn't prevent the layout from being applied to the current version of the Graph.
+
+![Add styles](_static/images/graph-page/gs-screenshot-graph-page-added_styles_conflicting_elements.png)
+
 
 
 ## Fixing Layout Compatibility Errors
